@@ -6,8 +6,8 @@ class MdnsSearchDevices {
       for (ActiveHost activeHost in await MdnsScanner.searchMdnsDevices(
         forceUseOfSavedSrvRecordList: true,
       )) {}
-      print('Next search');
-      await Future.delayed(const Duration(seconds: 60));
+      DateTime now = DateTime.now();
+      print('timestamp: ${now.hour}:${now.minute}.${now.second}');
     }
   }
 }
